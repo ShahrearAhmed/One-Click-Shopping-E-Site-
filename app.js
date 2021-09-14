@@ -1,3 +1,5 @@
+// -----------Load API Data Start-----------//
+
 const loadProducts = () => {
     const data = [{
         "id": 1,
@@ -222,9 +224,9 @@ const loadProducts = () => {
     }];
     showProducts(data);
 };
+// -----------Load API Data End-----------//
 
-
-// show all product in UI 
+// -----------Show All Products In UI-----// 
 const showProducts = (products) => {
     const allProducts = products.map((pd) => pd);
     for (const product of allProducts) {
@@ -251,6 +253,8 @@ const showProducts = (products) => {
         document.getElementById("all-products").appendChild(div);
     }
 };
+
+
 let count = 0;
 const addToCart = (id, price) => {
 
@@ -267,7 +271,7 @@ const getInputValue = (id) => {
     return converted;
 };
 
-// main price update function
+// ------Main Price Update Function-------//
 const updatePrice = (id, value) => {
     const convertedOldPrice = getInputValue(id);
     const convertPrice = parseFloat(value);
@@ -275,12 +279,12 @@ const updatePrice = (id, value) => {
     document.getElementById(id).innerText = total;
 };
 
-// set innerText function
+// ---------Set InnerText Function---------//
 const setInnerText = (id, value) => {
     document.getElementById(id).innerText = value.toFixed(2);
 };
 
-// update delivery charge and total Tax
+//-----------Update Delivery Charge And Total Text--------//
 const updateTaxAndCharge = () => {
     const priceConverted = getInputValue("price");
     if (priceConverted > 200) {
@@ -299,7 +303,7 @@ const updateTaxAndCharge = () => {
 
 };
 
-//grandTotal update function
+//---------Grand Total Function-----//
 const updateTotal = () => {
     const grandTotal =
         getInputValue("price") + getInputValue("delivery-charge") +
@@ -308,3 +312,5 @@ const updateTotal = () => {
 
 };
 loadProducts();
+
+// -------------END------------//

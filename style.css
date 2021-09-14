@@ -1,4 +1,4 @@
-/*CSS custom ddesign*/
+/*CSS Custom Design Start*/
 
 body {
 	overflow-x: hidden;
@@ -45,7 +45,7 @@ body {
 }
 
 
-/*single product design*/
+/*Single Product Design Start*/
 
 .single-product {
 	transition: 0.6s;
@@ -69,9 +69,9 @@ body {
 	height: 180px;
 	margin-top: 10px;
 }
+/*Single Product Design End*/
 
-
-/*cart design*/
+/*Cart Design Start*/
 
 .cart {
 	width: 330px;
@@ -87,9 +87,9 @@ body {
 .cart-main {
 	padding-right: 30px;
 }
+/*Cart Design End*/
 
-
-/*Media query*/
+/*Media Query Responsive Start*/
 
 @media only screen and (max-width: 768px) {
 	#all-products {
@@ -116,3 +116,7 @@ body {
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
+/*Media Query Responsive End*/
+
+
+/*CSS Custom Design End*/
